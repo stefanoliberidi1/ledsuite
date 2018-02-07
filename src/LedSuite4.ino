@@ -31,21 +31,11 @@
   PARAMETRI DI RETE
 */
 
-//CESCO!!!!!
-//const char* ssid = "XHOME3G";
-//const char* password = "9dylan9dog9";
-
 //ASUS!!!!!
 const char* ssid = "ASUS";
 const char* password = "nodemcul";
 
-//CASA PRIBAZ
-//const char* ssid = "FASTWEB-1-4A43E3";
-//const char* password = "D9D28FE40A";
 
-//CAPANNO
-//const char* ssid = "FASTWEB-1-F73F7F";
-//const char* password = "11826B4F5D";
 
 ESP8266WebServer server(80);
 

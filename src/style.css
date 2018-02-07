@@ -1,0 +1,104 @@
+#formcontainer
+{
+   float:left;
+}
+#resultcontainer
+{
+   float:left;
+   margin-top:50px;
+   font-family : Arial, sans-serif;
+   font-size: .8em;
+}
+.iframe_container
+{
+   margin:8px;
+   border:1px solid #999;
+}
+
+#result_div h1
+{
+   font-family : Arial, sans-serif;
+   font-size: 1.3em;
+   font-weight:bold;
+   color:#333;
+}
+
+#result_div p
+{
+   font-family : Arial, sans-serif;
+   font-size: .8em;
+}
+
+#contactus fieldset
+{
+   width:320px;
+   padding:20px;
+   border:1px solid #ccc;
+}
+
+#contactus legend, h2
+{
+   font-family : Arial, sans-serif;
+   font-size: 1.3em;
+   font-weight:bold;
+   color:#333;
+}
+
+#contactus label
+{
+   font-family : Arial, sans-serif;
+   font-size:0.8em;
+   font-weight: bold;
+}
+
+#contactus input[type="text"],textarea
+{
+  font-family : Arial, Verdana, sans-serif;
+  font-size: 0.8em;
+  line-height:140%;
+  color : #000; 
+  padding : 3px; 
+  border : 1px solid #333;
+
+}
+
+#contactus input[type="text"]
+{
+  height:18px;
+  width:220px;
+}
+
+#contactus input[type="submit"]
+{
+   width:100px;
+   height:30px;
+   padding-left:0px;
+}
+#contactus textarea
+{
+  height:120px;
+  width:310px;
+}
+#contactus input:focus,textarea:focus
+{
+  color : #009;
+  border : 1px solid #990000;
+  background-color : #ffff99;
+  font-weight:bold;
+}
+
+#contactus .container
+{
+   margin-top:8px;
+   margin-bottom: 10px;
+}
+
+#contactus .error
+{
+   font-family: Verdana, Arial, sans-serif; 
+   font-size: 0.7em;
+   color: #900;
+   background-color : #ffff00;
+}
+
+

@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>LED SUITE 4</title>
+    <link rel="STYLESHEET" type="text/css" href="style.css">
+
+
+    <script type='text/javascript'>
+        function hexToR(h) {
+            return parseInt((cutHex(h)).substring(0, 2), 16)
+        }
+
+        function hexToG(h) {
+            return parseInt((cutHex(h)).substring(2, 4), 16)
+        }
+
+        function hexToB(h) {
+            return parseInt((cutHex(h)).substring(4, 6), 16)
+        }
+
+        function cutHex(h) {
+            return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+        }
+
+        function colorChanged() {
+            //alert('babau');
+            var rgb = document.forms['contactus'].colore.value;
+            //alert(rgb);
+            var R = hexToR(rgb);
+            var G = hexToG(rgb);
+            var B = hexToB(rgb);
+            document.forms['contactus'].r.value = R;
+            document.forms['contactus'].g.value = G;
+            document.forms['contactus'].b.value = B;
+        }
+
+        function colorChanged2() {
+            //alert('babau');
+            var rgb = document.forms['contactus'].colore2.value;
+            //alert(rgb);
+            var R = hexToR(rgb);
+            var G = hexToG(rgb);
+            var B = hexToB(rgb);
+            document.forms['contactus'].r2.value = R;
+            document.forms['contactus'].g2.value = G;
+            document.forms['contactus'].b2.value = B;
+        }
+
+        function pageChanged() {
+            var selpage = document.forms['contactus'].page.value;
+            //alert(selpage);
+            switch (selpage) {
+                // Pattern types supported:
+                // pattern { NONE, STROBE, RAINBOW_CYCLE, THEATER_CHASE, COLOR_WIPE, SCANNER, FADE, SPARKLE, FIRE, REFILL };
+                //             0     1            2              3            4         5       6      7       8      9     // 
+                case '0':
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = 'none';
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = 'none';
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+                case '1':
+                    //document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = 'none';
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+                case '2':
+                    //document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('colore').style.display = 'none';
+                    document.getElementById('r').style.display = 'none';
+                    document.getElementById('g').style.display = 'none';
+                    document.getElementById('b').style.display = 'none';
+                    document.getElementById('reverse').style.display = "";
+                    break;
+                case '3':
+                    //document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = "";
+                    document.getElementById('r2').style.display = "";
+                    document.getElementById('g2').style.display = "";
+                    document.getElementById('b2').style.display = "";
+                    document.getElementById('reverse').style.display =
+                        document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+                case '4':
+                    //document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = "";
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+                case '5':
+                    //document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = 'none';
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+                case '6':
+                    document.getElementById('StrobeCount').style.display = "";
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = "";
+                    document.getElementById('r2').style.display = "";
+                    document.getElementById('g2').style.display = "";
+                    document.getElementById('b2').style.display = "";
+                    document.getElementById('reverse').style.display = 'none';
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+
+                case '7':
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = "";
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+                case '8':
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = "";
+                    document.getElementById('colore').style.display = 'none';
+                    document.getElementById('r').style.display = 'none';
+                    document.getElementById('g').style.display = 'none';
+                    document.getElementById('b').style.display = 'none';
+                    break;
+                case '9':
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = "";
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = "";
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                    break;
+            }
+        }
+    </script>
+</head>
+
+
+<body onload='hideResultDiv();'>
+
+
+
+
+    <div id='allcontainer'>
+        <div id='formcontainer'>
+            <!-- Form Code Start -->
+            <form id='contactus' action='' method='post'>
+                <fieldset>
+                    <legend>Multi-Suite Command Shell</legend>
+
+
+                    <div class='container'>
+                        <input type='button' name='Call' value='Test Richiesta' onclick='javascript: return CallSuites()' />
+                    </div>
+
+                    <div class='container'>
+                            <input type='checkbox' name='suite1' id='suite1' value='1' />
+                        <label for='host1'>Suite 1: Ticci </label>
+                        <input type='text' name='host1' id='host1' maxlength="50" value="192.168.1.101" /><br/>
+
+                    </div>
+
+                    <div class='container'>
+                            <input type='checkbox' name='suite2' id='suite2' value='1' />
+                        <label for='host2'>Suite 2: Mauro </label>
+                        <input type='text' name='host2' id='host2' maxlength="50" value="192.168.1.102" /><br/>
+
+                    </div>
+
+                    <div class='container'>
+                            <input type='checkbox' name='suite3' id='suite3' value='1' />
+                        <label for='host3'>Suite 3: Fra</label>
+                        <input type='text' name='host3' id='host3' maxlength="50" value="192.168.1.103" /><br/>
+
+                    </div>
+
+                    <div class='container'>
+                            <input type='checkbox' name='suite4' id='suite4' value='1' />
+                        <label for='host4'>Suite 4: Vale</label>
+                        <input type='text' name='host4' id='host4' maxlength="50" value="192.168.1.105" /><br/>
+
+                    </div>
+
+
+
+                    <div class='container'>
+                        <label for='page'>PATTERN:</label>
+                        <select name="page" id='page' onchange="pageChanged();">
+						<option value='0'>NONE</option>
+                        <option value='1'>STROBE</option>
+						<option value='2'>RAINBOW_CYCLE</option>
+						<option value='3'>THEATER_CHASE</option>
+						<option value='4'>COLOR_WIPE</option>
+						<option value='5'>SCANNER</option>
+						<option value='6'>FADE</option>
+                        <option value='7'>SPARKLE</option>
+                        <option value='8'>FIRE</option>
+                        <option value='9'>REFILL</option>
+						
+						</select>
+
+                    </div>
+
+                    <div class='container' id='reverse'>
+                        <label for='reverse'>REVERSE: </label>
+                        <input type='checkbox' name='reverse' id='reverse' value='1' /><br/></TD>
+                        <br/>
+                    </div>
+
+
+                    <div class='container' id='colore'>
+                        <label for='colore'>COLORE: </label>
+                        <input type='color' name='colore' id='colore' maxlength="10" onchange="colorChanged();" /><br/>
+
+                    </div>
+
+                    <div class='container' id='r'>
+                        <label for='r'>R: </label>
+                        <input type='text' name='r' id='r' maxlength="3" />
+
+                    </div>
+
+                    <div class='container' id='g'>
+                        <label for='g'>G: </label>
+                        <input type='text' name='g' id='g' maxlength="3" /><br/>
+
+                    </div>
+
+                    <div class='container' id='b'>
+                        <label for='b'>B: </label>
+                        <input type='text' name='b' id='b' maxlength="3" /><br/>
+
+                    </div>
+
+                    <div class='container' id='colore2'>
+                        <label for='colore2'>COLORE2: </label>
+                        <input type='color' name='colore2' id='colore2' maxlength="10" onchange="colorChanged2();" /><br/>
+
+                    </div>
+
+                    <div class='container' id='r2'>
+                        <label for='r2'>R: </label>
+                        <input type='text' name='r2' id='r2' maxlength="3" />
+
+                    </div>
+
+                    <div class='container' id='g2'>
+                        <label for='g2'>G: </label>
+                        <input type='text' name='g2' id='g2' maxlength="3" /><br/>
+
+                    </div>
+
+                    <div class='container' id='b2'>
+                        <label for='b2'>B: </label>
+                        <input type='text' name='b2' id='b2' maxlength="3" /><br/>
+
+                    </div>
+
+                    <div class='container' id='StrobeCount'>
+                        <label for='StrobeCount'>Numero sfumature: </label>
+                        <input type='text' name='StrobeCount' id='StrobeCount' maxlength="10" value='20' /><br/>
+
+                    </div>
+
+                    <div class='container' id='FlashDelay'>
+                        <label for='FlashDelay'>Velocità del Flash:</label>
+                        <input type='text' name='FlashDelay' id='FlashDelay' maxlength="10" value='50' /><br/>
+
+                    </div>
+
+                    <div class='container' id='EndPause'>
+                        <label for='EndPause'>Pausa al termine:</label>
+                        <input type='text' name='EndPause' id='EndPause' maxlength="10" value='0' /><br/>
+
+                    </div>
+
+                    <legend>Pins</legend>
+
+                    <TABLE>
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin0'> 1 - Testa</label><br/></TD>
+                                <TD><input type='checkbox' name='pin0' id='pin0' value='1' /><br/></TD>
+
+                            </div>
+                        </TR>
+
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin1'> 2 - Braccio dx</label><br/></TD>
+                                <TD><input type='checkbox' name='pin1' id='pin1' value='1' /><br/></TD>
+
+                            </div>
+                        </TR>
+
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin2'> 3 - Petto</label><br/></TD>
+                                <TD><input type='checkbox' name='pin2' id='pin2' value='1' /><br/></TD>
+
+                            </div>
+                        </TR>
+
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin3'> 4 - Braccio sx</label><br/></TD>
+                                <TD><input type='checkbox' name='pin3' id='pin3' value='1' /><br/></TD>
+
+                            </div>
+                        </TR>
+
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin4'> 5 - Gamba sx</label><br/></TD>
+                                <TD><input type='checkbox' name='pin4' id='pin4' value='1' /><br/></TD>
+
+                            </div>
+                        </TR>
+
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin5'> 6 - Gamba dx</label><br/></TD>
+                                <TD><input type='checkbox' name='pin5' id='pin5' value='1' /><br/></TD>
+                            </div>
+                        </TR>
+
+                        <TR>
+                            <div class='container'>
+                                <TD><label for='pin6'> 7 - avanzo</label><br/></TD>
+                                <TD><input type='checkbox' name='pin6' id='pin6' value='1' /><br/></TD>
+                            </div>
+                        </TR>
+
+                    </TABLE>
+
+                    <div class='container'>
+                        <label for='millis'>Millisecondo:</label>
+                        <input type='text' name='millis' id='millis' maxlength="10" value='0' /><br/>
+
+                    </div>
+                    <!--
+<div class='container'>
+    <label for='params' >:</label><br/>
+    <input type='text' name='params' id='params' maxlength="100" /><br/>
+    <span id='contactus_email_errorloc' class='error'></span>
+</div>
+-->
+
+
+                </fieldset>
+            </form>
+
+
+
+
+            <script type='text/javascript'>
+                function getSuiteFormData() {
+                    var a = "/function?FUNCTION=";
+                    a = a + document.forms['contactus'].page.value;
+                    a = a + '&r=' + document.forms['contactus'].r.value;
+                    a = a + '&g=' + document.forms['contactus'].g.value;
+                    a = a + '&b=' + document.forms['contactus'].b.value;
+                    if (document.forms['contactus'].page.value == 3) {
+                        a = a + '&r2=' + document.forms['contactus'].r2.value;
+                        a = a + '&g2=' + document.forms['contactus'].g2.value;
+                        a = a + '&b2=' + document.forms['contactus'].b2.value;
+                    }
+                    if (document.forms['contactus'].page.value == 6) {
+                        a = a + '&r2=' + document.forms['contactus'].r2.value;
+                        a = a + '&g2=' + document.forms['contactus'].g2.value;
+                        a = a + '&b2=' + document.forms['contactus'].b2.value;
+                        a = a + '&StrobeCount=' + document.forms['contactus'].StrobeCount.value;
+                    }
+                    a = a + '&FlashDelay=' + document.forms['contactus'].FlashDelay.value;
+                    if (document.forms['contactus'].pin0.checked) {
+                        a = a + '&pin0=' + document.forms['contactus'].pin0.value;
+                    }
+                    if (document.forms['contactus'].pin1.checked) {
+                        a = a + '&pin1=' + document.forms['contactus'].pin1.value;
+                    }
+                    if (document.forms['contactus'].pin2.checked) {
+                        a = a + '&pin2=' + document.forms['contactus'].pin2.value;
+                    }
+                    if (document.forms['contactus'].pin3.checked) {
+                        a = a + '&pin3=' + document.forms['contactus'].pin3.value;
+                    }
+                    if (document.forms['contactus'].pin4.checked) {
+                        a = a + '&pin4=' + document.forms['contactus'].pin4.value;
+                    }
+                    if (document.forms['contactus'].pin5.checked) {
+                        a = a + '&pin5=' + document.forms['contactus'].pin5.value;
+                    }
+                    if (document.forms['contactus'].pin6.checked) {
+                        a = a + '&pin6=' + document.forms['contactus'].pin6.value;
+                    }
+
+                    if (document.forms['contactus'].reverse.checked) {
+                        a = a + '&reverse=1';
+                    }
+                    //alert(a);
+                    return a;
+                }
+
+                function CallSuites() {
+
+                    var call1 = document.forms['contactus'].host1.value;
+                    //alert (document.forms['contactus'].suite1.checked);
+                    if ( (call1.length > 0) && (document.forms['contactus'].suite1.checked) ) {
+                        call1 = 'http://' + call1 + getSuiteFormData();
+                    } else {
+                        call1 = null;
+                    }
+
+                    var call2 = document.forms['contactus'].host2.value;
+                    if ( (call2.length > 0) && (document.forms['contactus'].suite2.checked)  ){
+                        call2 = 'http://' + call2 + getSuiteFormData();
+                    } else {
+                        call2 = null;
+                    }
+
+                    var call3 = document.forms['contactus'].host3.value;
+                    if ( (call3.length > 0) && (document.forms['contactus'].suite3.checked)  ){
+                        call3 = 'http://' + call3 + getSuiteFormData();
+                    } else {
+                        call3 = null;
+                    }
+
+                    var call4 = document.forms['contactus'].host4.value;
+                    if ( (call4.length > 0) && (document.forms['contactus'].suite4.checked)  ) {
+                        call4 = 'http://' + call4 + getSuiteFormData();
+                    } else {
+                        call4 = null;
+                    }
+
+
+                    if (document.forms['contactus'].suite1.checked) {
+                        //alert("chiammo req1");
+                        var req1 = new XMLHttpRequest();
+                        req1.open('GET', call1, true);
+                        req1.send();
+
+                    }
+                    if (document.forms['contactus'].suite2.checked) {
+                        //alert("chiammo req2");
+                        var req2 = new XMLHttpRequest();
+                        req2.open('GET', call2, true);
+                        req2.send();
+                    }
+                    if (document.forms['contactus'].suite3.checked) {
+                        //alert("chiammo req3");
+                        var req3 = new XMLHttpRequest();
+                        req3.open('GET', call3, true);
+                        req3.send();
+                    }
+                    if (document.forms['contactus'].suite4.checked) {
+                        //alert("chiammo req1");
+                        var req4 = new XMLHttpRequest();
+                        req4.open('GET', call4, true);
+                        req4.send();
+                    }
+
+                    //alert(call1+"\n"+call2+"\n"+call3+"\n"+call4+"\n");
+                    // showResultDiv();
+
+                    //document.getElementById('results').innerHTML = (call1 + "\n" + call2 + "\n" + call3 + "\n" + call4 + "\n");
+                    var str_call1='';
+                    var str_call2='';
+                    var str_call3='';
+                    var str_call4='';
+                    if (call1!=null){
+                        str_call1='{"time_ms":'+document.getElementById('millis').value+',\n';
+                        str_call1+='"target":"' + call1 + '"},\n';
+                    }
+                    if (call2!=null){
+                        str_call2='{"time_ms":'+document.getElementById('millis').value+',\n';
+                        str_call2+='"target":"' + call2 + '"},\n';
+                    }
+                    if (call3!=null){
+                        str_call3='{"time_ms":'+document.getElementById('millis').value+',\n';
+                        str_call3+='"target":"' + call3 + '"},\n';
+                    }
+                    if (call4!=null){
+                        str_call4='{"time_ms":'+document.getElementById('millis').value+',\n';
+                        str_call4+='"target": "' + call4 + '"},\n';
+                    }
+                    //str_call='{"time_ms":'+document.getElementById('millis').value+',\n';
+                    //str_call+='"target":"' + call1 + '"},';
+                    document.getElementById('results').innerHTML+='---------\n' +str_call1+str_call2+str_call3+str_call4;
+                    return true;
+                }
+
+
+
+
+
+                function showResultDiv() { //
+                    var result_div = document.getElementById('resultcontainer');
+                    result_div.style.display = "";
+                }
+
+                function hideResultDiv() {
+                    var result_div = document.getElementById('resultcontainer');
+                    result_div.style.display = "";
+                    //nascondo i paramentri. default function = test !!!
+                    document.getElementById('StrobeCount').style.display = '';
+                    document.getElementById('FlashDelay').style.display = '';
+                    document.getElementById('EndPause').style.display = 'none';
+                    document.getElementById('StrobeCount').style.display = 'none';
+                    document.getElementById('FlashDelay').style.display = 'none';
+                    document.getElementById('colore2').style.display = 'none';
+                    document.getElementById('r2').style.display = 'none';
+                    document.getElementById('g2').style.display = 'none';
+                    document.getElementById('b2').style.display = 'none';
+                    document.getElementById('reverse').style.display = 'none';
+                    document.getElementById('colore').style.display = "";
+                    document.getElementById('r').style.display = "";
+                    document.getElementById('g').style.display = "";
+                    document.getElementById('b').style.display = "";
+                }
+            </script>
+            <!--
+Form Code End
+-->
+        </div>
+
+        <div id='resultcontainer'>
+            Targets
+            <div class='iframe_container'>
+
+                <TEXTAREA name="results" id="results" cols="110" rows="18"> </TEXTAREA>
+            </div>
+
+
+
+        </div>
+
+</body>
+
+</html>
